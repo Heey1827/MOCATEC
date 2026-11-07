@@ -1,0 +1,115 @@
+/* ===== Tema (variáveis da marca + ajuste do Bootstrap) ===== */
+:root {
+  --brand-200: #e5d1cb;
+  --brand-500: #8C2D19;
+  --brand-600: #752514;
+  --brand-700: #5e1d10;
+  --brand-accent: #D96B43;
+  --brand-light: #FCECE4;
+  --brand-bg: #FAF7F2;
+
+  --bs-body-font-family: 'Poppins', sans-serif;
+  --bs-body-bg: var(--brand-bg);
+  --bs-body-color: #1f2937;
+}
+
+html { scroll-behavior: smooth; }
+body { -webkit-font-smoothing: antialiased; }
+
+/* ===== Navbar ===== */
+.navbar-brand-bg { background: var(--brand-500); }
+.navbar-brand-bg .nav-link:hover { color: var(--brand-200); }
+.logo-circle {
+  width: 2.25rem; height: 2.25rem; border-radius: 50%;
+  background: #fff; color: var(--brand-500);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 1.125rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,.2);
+}
+
+/* ===== Hero ===== */
+.hero {
+  position: relative; overflow: hidden;
+  background: linear-gradient(to right, var(--brand-600), var(--brand-500));
+}
+.hero::before {
+  content: ""; position: absolute; inset: 0; opacity: .1;
+  background: radial-gradient(#fff 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+.hero > .container { position: relative; z-index: 1; }
+.hero-tag {
+  background: rgba(217,107,67,.3); border: 1px solid rgba(255,255,255,.2);
+}
+.counter-card {
+  background: rgba(255,255,255,.1); backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,.1); border-radius: .75rem; padding: 1rem;
+}
+
+/* ===== Títulos de seção ===== */
+.title-bar {
+  width: 4rem; height: .25rem; border-radius: 9999px;
+  background: var(--brand-accent); margin: 0 auto 1rem;
+}
+
+/* ===== Botões da marca (Bootstrap .btn customizado) ===== */
+.btn-brand {
+  --bs-btn-color: #fff; --bs-btn-bg: var(--brand-500); --bs-btn-border-color: var(--brand-500);
+  --bs-btn-hover-color: #fff; --bs-btn-hover-bg: var(--brand-600); --bs-btn-hover-border-color: var(--brand-600);
+  --bs-btn-active-color: #fff; --bs-btn-active-bg: var(--brand-700); --bs-btn-active-border-color: var(--brand-700);
+}
+.btn-soft {
+  --bs-btn-color: var(--brand-accent); --bs-btn-bg: var(--brand-light); --bs-btn-border-color: transparent;
+  --bs-btn-hover-color: #fff; --bs-btn-hover-bg: var(--brand-accent); --bs-btn-hover-border-color: var(--brand-accent);
+  --bs-btn-active-color: #fff; --bs-btn-active-bg: var(--brand-accent); --bs-btn-active-border-color: var(--brand-accent);
+}
+.btn-filter {
+  --bs-btn-color: #4b5563; --bs-btn-bg: #fff; --bs-btn-border-color: #e5e7eb;
+  --bs-btn-hover-color: #4b5563; --bs-btn-hover-bg: var(--brand-light); --bs-btn-hover-border-color: #e5e7eb;
+  --bs-btn-active-color: #fff; --bs-btn-active-bg: var(--brand-500); --bs-btn-active-border-color: var(--brand-500);
+}
+
+/* ===== Cards ===== */
+.card-item { transition: box-shadow .2s; border-color: #f3f4f6; }
+.card-item:hover { box-shadow: 0 .5rem 1rem rgba(0,0,0,.1) !important; }
+.card-item .card-img-top { height: 12rem; object-fit: cover; background: #e5e7eb; }
+.badge-soft {
+  background: var(--brand-light); color: var(--brand-accent);
+  border: 1px solid rgba(217,107,67,.2); font-weight: 600;
+}
+.science-card {
+  background: var(--brand-bg); border: 1px solid rgba(229,209,203,.5);
+  transition: border-color .2s;
+}
+.science-card:hover { border-color: var(--brand-accent); }
+.icon-box {
+  width: 3rem; height: 3rem; border-radius: .5rem; margin-bottom: 1rem;
+  background: var(--brand-500); color: #fff; font-size: 1.25rem;
+  display: flex; align-items: center; justify-content: center;
+}
+.tag-soft {
+  background: var(--brand-light); color: var(--brand-accent);
+  font-size: .75rem; font-weight: 600; padding: .25rem .625rem; border-radius: .25rem;
+}
+.mural-post {
+  background: #fff; border: 1px solid rgba(229,209,203,.6); border-radius: .75rem;
+  padding: 1rem; box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+/* ===== Barras de progresso ===== */
+.progress { height: .75rem; background: #f3f4f6; }
+.bar-accent { background: var(--brand-accent); }
+.bar-brand { background: var(--brand-500); }
+
+/* ===== Formulário ===== */
+.form-control:focus { border-color: var(--brand-accent); box-shadow: none; }
+
+/* ===== Modal ===== */
+.modal-brand { background: var(--brand-500); color: #fff; }
+.custom-scrollbar::-webkit-scrollbar { width: 6px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: var(--brand-accent); border-radius: 4px; }
+
+/* ===== Animação (novos recados no mural) ===== */
+.fade-in { animation: fadeIn .4s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
